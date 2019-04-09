@@ -16,12 +16,16 @@
 
 let newColor = 'pink'
 
-document.getElementById('set-color').addEventListener('click',function(){
+document.getElementById('set-color').addEventListener('click', function(){
 newColor = document.getElementById('color-field').value
 document.getElementsByClassName('brush')[0].style.backgroundColor = newColor;
 event.preventDefault() 
 })
 
 
+
+let newSquare= document.createElement('div')
+newSquare.classList.add("square")
+document.body.appendChild(newSquare);
 
 
