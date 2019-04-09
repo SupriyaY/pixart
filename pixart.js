@@ -24,17 +24,16 @@ event.preventDefault()
 
 
 
-for(let i = 0; i<8000; i++){
+ for(let i = 0; i<8000; i++){
 let newSquare= document.createElement('div')
 newSquare.classList.add("square")
+newSquare.addEventListener('mouseover', function(){
+newSquare.style.backgroundColor = newColor
+    
+})
 document.body.appendChild(newSquare);
+
 }
-
-document.getElementsByClassName('square')[0].addEventListener('mouseover', function(){
-document.getElementsByClassName('brush')[0].style.backgroundColor = newColor;
-document.getElementsByClassName('square')[0].style.backgroundColor= newColor
-
- })
 
 
 
