@@ -27,13 +27,24 @@
 let newValue = 'pink';
 
 $('#set-color').click(function() {
-newValue = $('#color-field').val()
-// $('.brush').css('backgroundColor') = newValue
+newValue = $('#color-field').val();
+$('.brush').css('background-color', newValue)
 event.preventDefault();
 })
 
+console.log(newValue);
 
-alert(newValue);
+
+for (let i = 0; i<8000; i++){
+    let newSqu = $('<div/>')
+    newSqu.addClass('square')
+    newSqu.on('mouseover', function(){
+        newSqu.css('background-color', newValue) 
+    })
+    $('body').append(newSqu)
+
+}
+
 
 // let newColor = 'pink'
 
